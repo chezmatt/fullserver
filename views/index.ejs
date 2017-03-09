@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>Survey Assignment I NodeJS / Express</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index">
@@ -13,16 +13,96 @@
     <link rel="stylesheet" type="text/css" href="main.css" media="screen">
   <style>
 /*css here */
-
+body {
+  background: #e2e1e0;
+  /*text-align: center;*/
+}
+.card {
+  background: #fff;
+  border-radius: 2px;
+  padding: 2em;
+  /*display: inline-block;*/
+  /*height: 300px;*/
+  margin: 1rem;
+  position: relative;
+  /*width: 300px;*/
+}
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+/*fieldset {
+border-radius: 10px;
+border: 1px solid #888;
+padding: 20px;*/
+/*width: 200px;
+height: 150px; */
+}
   </style>
 </head>
 <body>
-<header>
-    <h1>VIEWS HTML Index</h1>
-    <form action='/users' method='post'>
-    Name: <input type='text' name='name'>
-    Email: <input type='text' name='email'>
-    <input type='submit' value='create user'>
+<!-- .container is main centered wrapper -->
+<div class="container">
+<form action="/result" method="post">
+<fieldset class="card card-4">
+<div class="row"><legend>Survey Form I</legend></div>
+
+
+  <div class="row">
+    <div class="six columns">
+        <label for="name">Your Name:</label>
+        <input class="u-full-width" type="text" placeholder="Luke Skywalker" id="name" name="name">
+    </div>
+    <div class="six columns">
+      <label for="EmailInput">Your email:</label>
+      <input class="u-full-width" type="email" placeholder="lskywalker@newrepublic.gal" id="EmailInput" name="email">
+    </div>
+  </div>
+    <div class="row">
+    <div class="six columns">
+      <label for="dojo_loc">Dojo Location:</label>
+      <select class="u-full-width" id="dojo_loc" name="dojo_loc">
+        <optgroup label="California">
+            <option value="SJC">Silicon Valley</option>
+            <option value="SFO" selected>San Fran</option>
+            <option value="OAK">Berkley</option>
+            <option value="LAX">Los Angeles</option>
+            <option value="SAN">San Diego</option>
+        </optgroup>
+        <optgroup label="Oblivion">
+            <option value="jesus_land">Texas</option>
+            <option value="micky_mouse">Florida</option>
+            <option value="college">Boston</option>
+            <option value="BigApple">New York City</option>
+        </optgroup>
+        <option value="online">Online </option>
+      </select>
+    </div>
+    <div class="six columns">
+      <label for="lang">Favorite Language:</label>
+      <select class="u-full-width" id="fav_lang" name="fav_lang">
+        <optgroup label="Programming">
+            <option value="py">Python / Django</option>
+            <option value="rb">Ruby / Rails</option>
+            <option value="js" selected>NodeJS / MEAN</option>
+        </optgroup>
+        <optgroup label="spoken">
+            <option value="cn">Zhōngwén</option>
+            <option value="fn">Francais</option>
+            <option value="es">Espanol</option>
+            <option value="us">Murican!</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+  <label for="exampleMessage">Comment (optional):</label>
+  <textarea class="u-full-width" placeholder="Hi Dave …" id="message" name="comment"></textarea>
+  <label class="example-send-yourself-copy u-pull-right">
+    <input  type="checkbox">
+    <span class="label-body">Send a copy to yourself.</span>
+  </label>
+  <input class="button-primary" type="submit" value="Submit">
+</fieldset>
 </form>
+</div>
 </body>
 </html>
