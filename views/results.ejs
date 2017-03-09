@@ -17,15 +17,16 @@ body {
 }
  .card {
 padding: 3em 1em 1em 1em;
-line-height: 6pt;
+/*line-height: 6pt;*/
   text-align: left;
    background: #fff;
    border-radius: 5px;
    display: inline-block;
-   height: 300px;
+   height: 400px;
    margin: 1rem;
    position: relative;
-   width: 300px;
+   width: 350px;
+   overflow: auto;
  }
 
  .card-1 {
@@ -59,10 +60,13 @@ line-height: 6pt;
         </style>
     </head>
     <body>
-        <h2 style ="text-decoration: underline;">Submitted Information</h2>
+        <div class="row">
+            <h2 style ="text-decoration: underline;">Submitted Information</h2>
+        </div>
+        <!-- spacing issue -->
         <div class="row">
         <% for (var i = 0; i < users.length; i++) { %>
-            <div class="card card-2">
+            <div class="card card-2 u-max-full-width u-cf ">
             <p><strong>Name:  </strong><%= users[i].name %></p>
             <p><strong>Dojo Location:  </strong><%= users[i].dojo_loc %></p>
             <p><strong>Favorite Language:  </strong><%= users[i].fav_lang %></p>
@@ -71,7 +75,10 @@ line-height: 6pt;
         </div>
         <% } %>
     </div>
-    <footer class="row"><a class="button" href="/">Go Back.</a></footer>
-
+    <footer class="row">
+        <a class="button" href="/">Go Back.</a>
+        <a class="button" href="/teapot">418 Easter Egg</a>
+        <a class="button" href="http://www.mlwilkinson.com/index.html" target="_blank">Portal</a>
+    </footer>
     </body>
 </html>
